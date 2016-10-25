@@ -1,0 +1,22 @@
+{% extends "static/index.html" %}
+{% load static %}
+{% block content %}
+<div class="row">
+	<div class="col-md-offset-2 col-md-9">
+  		<span>&nbsp;</span>
+  	</div>
+</div>
+	
+{% endblock %}
+{% block custom_js %}
+<script>
+		
+	$(document).ready(function(e) {
+		$("#register_btn").on('click', function()
+		{
+			window.location.href= "{% url 'dashboard.index'%}";
+		});
+	});
+</script>
+
+{% endblock %}
